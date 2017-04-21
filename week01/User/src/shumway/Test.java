@@ -9,19 +9,42 @@ public class Test {
 
     String password;
 
+
     public static Scanner myScans = new Scanner(System.in);
 
     public static void main(String[] args) {
+        boolean trueFalse;
 
+        Test t = new Test();
+
+        User user = new User(t.getPassFromUser());
+
+        t.hash(user);
+
+        User verify = new User(t.getPassFromUser());
+
+        trueFalse = t.verify(verify);
+
+        if(trueFalse) {
+            System.out.print("Passwords Match!");
+        }
+        else {
+            System.out.print("Passwords Do NOT Match!");
+        }
+    }
+
+    public String getPassFromUser() {
         System.out.print("Enter a password: ");
         password = myScans.next();
 
-        User user = new User(password);
+        return password;
+    }
 
-        System.out.print("Before Hash:");
-        System.out.print("\tPassword: " + user.getPassword());
-        System.out.print("\tSalt: " + user.getSalt());
-        System.out.print("\tHash: " + user.getHashedPassword());
+    public void hash(User user) {
+        System.out.print("Before Hash:\n");
+        System.out.print("\tPassword: " + user.getPassword() + "\n");
+        System.out.print("\tSalt: " + user.getSalt() + "\n");
+        System.out.print("\tHash: " + user.getHashedPassword() + "\n");
 
         try {
             hashUserPassword(user);
@@ -29,21 +52,22 @@ public class Test {
             e.printStackTrace();
         }
 
-        System.out.print("After Hash:");
-        System.out.print("\tPassword: " + user.getPassword());
-        System.out.print("\tSalt: " + user.getSalt());
-        System.out.print("\tHash: " + user.getHashedPassword());
+        System.out.print("After Hash:" + "\n");
+        System.out.print("\tPassword: " + user.getPassword() +"\n");
+        System.out.print("\tSalt: " + user.getSalt() +"\n");
+        System.out.print("\tHash: " + user.getHashedPassword() + "\n");
+    }
 
-        System.out.print("Enter a password for verification: ");
-        password = myScans.next();
-
-        User verify = new User(password);
+    public boolean verify(User verify) {
+        boolean trueFalse = false;
 
         try {
-            verifyPassword(verify);
+            trueFalse = verifyPassword(verify);
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        return trueFalse;
     }
 
 }
