@@ -21,9 +21,11 @@ public class Test {
 
         t.hash(user);
 
-        User verify = new User(t.getPassFromUser());
+        user.setPassword((t.getPassFromUser()));
 
-        trueFalse = t.verify(verify);
+        //t.hash(verify);
+
+        trueFalse = t.verify(user);
 
         if(trueFalse) {
             System.out.print("Passwords Match!");
