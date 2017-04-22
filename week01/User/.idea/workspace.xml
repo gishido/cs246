@@ -52,8 +52,8 @@
       <file leaf-file-name="NSALoginController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/shumway/NSALoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2176">
-              <caret line="160" column="1" lean-forward="false" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+            <state relative-caret-position="85">
+              <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
               <folding>
                 <element signature="docComment;class#NSALoginController#0" expanded="false" />
               </folding>
@@ -535,8 +535,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/shumway/NSALoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2176">
-          <caret line="160" column="1" lean-forward="false" selection-start-line="160" selection-start-column="1" selection-end-line="160" selection-end-column="1" />
+        <state relative-caret-position="85">
+          <caret line="5" column="57" lean-forward="true" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
           <folding>
             <element signature="docComment;class#NSALoginController#0" expanded="false" />
           </folding>
