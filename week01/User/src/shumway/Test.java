@@ -49,8 +49,12 @@ public class Test {
 
     try {
       hashUserPassword(user);
-    } catch (Exception e) {
-      e.printStackTrace();
+    } catch(WeakPasswordException ex) {
+      System.out.println("Password rejected: " + ex.getMessage());
+      return;
+    } catch(Exception e) {
+      System.out.println("Something went wrong.");
+      return;
     }
 
     System.out.print("After Hash:" + "\n");
@@ -65,7 +69,7 @@ public class Test {
     try {
       trueFalse = verifyPassword(verify);
     } catch (Exception e) {
-      e.printStackTrace();
+      System.out.println("Something went wrong.");
     }
 
     return trueFalse;
