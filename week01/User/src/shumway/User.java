@@ -7,35 +7,35 @@ import javax.print.DocFlavor;
  */
 public class User {
 
-    private String uPassword;
-    private String uSalt;
-    private String uHash;
+  private String uPassword;
+  private String uSalt;
+  private String uHash;
 
-    public String getPassword() {
-        return uPassword;
-    }
+  public String getPassword() {
+    return uPassword;
+  }
 
-    public void setPassword(String thePassword) {
-        uPassword = thePassword;
-    }
+  public void setPassword(String thePassword) {
+    uPassword = thePassword;
+  }
 
-    public String getSalt() {
-        return uSalt;
-    }
+  public String getSalt() {
+    return uSalt;
+  }
 
-    public void setSalt(String theSalt) {
-        uSalt = theSalt;
-    }
+  public void setSalt(String theSalt) {
+    uSalt = theSalt;
+  }
 
-    public String getHashedPassword() {
-        return uHash;
-    }
+  public String getHashedPassword() {
+    return uHash;
+  }
 
-    public void setHashedPassword(String theHash) {
-        uHash = theHash;
-    }
+  public void setHashedPassword(String theHash) {
+    uHash = theHash;
+  }
 
-    public User(String password) {
-        uPassword = password;
-    }
+  public User(String password) {
+    uPassword = password;
+  }
 }
