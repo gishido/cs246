@@ -8,8 +8,8 @@ public class Lodging implements Expense {
   float mexCost = 100;
   float euroCost = 200;
   float japCost = 300;
-  double euroTax = .10;
-  double japTax = .30;
+  double euroTax = 1.10;
+  double japTax = 1.30;
   Destination myDest;
   int myStay;
 
@@ -22,12 +22,12 @@ public class Lodging implements Expense {
 
     switch (myDest) {
       case Mexico:
-        return mexCost *= myStay;
+        return mexCost * myStay;
       case Europe:
-        euroCost = (euroCost * myStay) + ((euroCost * myStay) * (float)euroTax);
+        euroCost = (euroCost * myStay)* (float)euroTax;
         return euroCost;
       case Japan:
-        japCost = (japCost * myStay) + ((japCost * myStay) * (float)japTax);
+        japCost = (japCost * myStay) * (float)japTax;
         return japCost;
       default:
         return 0;

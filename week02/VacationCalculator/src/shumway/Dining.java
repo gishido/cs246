@@ -1,7 +1,5 @@
 package shumway;
 
-import sun.security.krb5.internal.crypto.Des;
-
 /**
  * Created by thesh on 4/25/2017.
  */
@@ -22,11 +20,11 @@ public class Dining implements Expense {
 
     switch (myDest) {
       case Mexico:
-        return mexCost *= myStay;
+        return mexCost * myStay;
       case Europe:
-        return euroCost *= myStay;
+        return euroCost * myStay;
       case Japan:
-        return japCost *= myStay;
+        return japCost * myStay;
       default:
         return 0;
     }

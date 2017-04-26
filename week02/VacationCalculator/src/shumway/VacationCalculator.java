@@ -1,8 +1,6 @@
 package shumway;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
 public class VacationCalculator {
@@ -23,14 +21,11 @@ public class VacationCalculator {
     public float calculateVacationCost(Destination dest, int numDays)
     {
       Destination currDest = dest;
-      List<Expense> expenses = new ArrayList();
-      Cruise newCruise = new Cruise(currDest);
-      Dining newDining = new Dining(currDest, numDays);
-      Lodging newLodge = new Lodging(currDest, numDays);
+      List<Expense> expenses = new ArrayList<Expense>();
 
-      expenses.add(newCruise);
-      expenses.add(newDining);
-      expenses.add(newLodge);
+      expenses.add(new Cruise(currDest));
+      expenses.add(new Dining(currDest, numDays));
+      expenses.add(new Lodging(currDest, numDays));
 
       float cost = tallyExpenses(expenses);
 
@@ -41,9 +36,9 @@ public class VacationCalculator {
     {
       float tally = 0;
 
-      for (int i = 0; i < expenses.size(); i++)
+      for (Expense exp : expenses)
       {
-        tally += expenses.get(i).getCost();
+        tally += exp.getCost();
       }
       return tally;
     }
