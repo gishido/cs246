@@ -26,9 +26,11 @@ public class VacationCalculator {
       List<Expense> expenses = new ArrayList();
       Cruise newCruise = new Cruise(currDest);
       Dining newDining = new Dining(currDest, numDays);
+      Lodging newLodge = new Lodging(currDest, numDays);
 
       expenses.add(newCruise);
       expenses.add(newDining);
+      expenses.add(newLodge);
 
       float cost = tallyExpenses(expenses);
 
