@@ -12,14 +12,15 @@ public class Cruise implements Expense{
   float mexCost = 1000;
   float euroCost = 2000;
   float japCost = 3000;
+  Destination myDest;
 
   public Cruise (Destination dest) {
-    float cost = getCost(dest);
+    myDest = dest;
   }
 
-  public float getCost(Destination theDest) {
+  public float getCost() {
 
-    switch (theDest) {
+    switch (myDest) {
       case Mexico:
         return mexCost;
       case Europe:

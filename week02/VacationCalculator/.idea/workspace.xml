@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="417e27b3-179a-4477-91ad-794273ee96a8" name="Default" comment="" />
+    <list default="true" id="417e27b3-179a-4477-91ad-794273ee96a8" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shumway/Cruise.java" afterPath="$PROJECT_DIR$/src/shumway/Cruise.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shumway/Expense.java" afterPath="$PROJECT_DIR$/src/shumway/Expense.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/shumway/VacationCalculator.java" afterPath="$PROJECT_DIR$/src/shumway/VacationCalculator.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,13 +20,10 @@
       <file leaf-file-name="VacationCalculator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/shumway/VacationCalculator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+            <state relative-caret-position="238">
+              <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
               <folding>
-                <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#272#273#0" expanded="true" />
-                <element signature="e#327#328#0" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -41,12 +42,12 @@
       <file leaf-file-name="Cruise.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/shumway/Cruise.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+            <state relative-caret-position="510">
+              <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#381#382#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -56,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/src/shumway/Expense.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+              <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -86,8 +87,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/shumway/Main.java" />
         <option value="$PROJECT_DIR$/src/shumway/Destination.java" />
-        <option value="$PROJECT_DIR$/src/shumway/Expense.java" />
         <option value="$PROJECT_DIR$/src/shumway/Cruise.java" />
+        <option value="$PROJECT_DIR$/src/shumway/Expense.java" />
         <option value="$PROJECT_DIR$/src/shumway/VacationCalculator.java" />
       </list>
     </option>
@@ -509,19 +510,19 @@
     <entry file="file://$PROJECT_DIR$/src/shumway/Expense.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/shumway/Cruise.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        <state relative-caret-position="510">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -536,13 +537,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/shumway/VacationCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="238">
+          <caret line="14" column="65" lean-forward="false" selection-start-line="14" selection-start-column="65" selection-end-line="14" selection-end-column="65" />
           <folding>
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
