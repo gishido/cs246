@@ -1,0 +1,38 @@
+# 01 Ponder : Weekly Reflection
+
+1. Describe one challenge your team experienced working on the Hello World activity.
+Since I have never worked with intellij, this took a minute to get set up and oriented around.  My next challenge was to get git to look in the right folders and files.  
+
+2. For the NSA Cryptography assignment, what did you learn about how Java parameter passing differs from C++?
+Even though it says it's passing by value, it's really passing by reference.  It isn't all that different from C++, other than I can tell C++ what I want it to do and so far, Java only has the pass by reference option.  At least, that's if I read it corretly :)
+
+3. Did you complete the Stretch Challenge for the NSA Cryptography? If so, briefly describe what you did, and how you structured your code.
+I did do the stretch challenge.  Since I worked on it super late at night, I wasn't sure how long it was going to take me to complete based on other homework.  So I submitted the non-stretch to just make sure it was done and then I, later, created the exception class.  It was easier than I thought.  I had a good reference sheet via the stack overflow document.
+
+4. What did you learn from comparing your code to the teacher's solution?
+It was good to reference the teacher's solution to make sure I was on the right path.  I think I could have applied my exception code without looking at the teacher's solution, but since I had already submitted, I didn't see a reason to NOT take a peak at the solution while I was finishing up.
+
+5. After completing the assignments this week, what questions do you still have?
+My main questions are around intellij.  I took a few mintues to reference some typical tricks and tips to better orient myself to the tool.
+
+6. If you were getting paid to work on this week's Prove assignment and you had another month to work on it, what would you add?
+I would probably add the ability to better define password policy and validation along with accpeting varying data types.  I would probably look into templatizing the code for reusability and I would work a little harder to thouroghly understand the hashing/encryption algorithms.
+
+7. A common Java interview question is "What are javadocs and when should they be used?". How would you answer that question?
+Basically, javadocs are reference material that explains the classes, the methods, the types of data the methods accept and the basic uses of the afformentioned objects.  They should be used always :D
+
+8. Of all of the resources in this week's Preparation assignment, which was the _most_ helpful to you and why?
+I think that slack was most helpful this week.  Not that the code and instructions weren't helpful, but being able to reference others experience while I'm attempting something similar, helped give me ideas I may have missed simply by having a different anyalitcal process.
+
+9. Of all of the resources in this week's Preparation assignment, which was the _least_ helpful to you and why?
+I can't think of anything that was least helpful.  
+
+10. How many hours did you spend on this class this week?
+
+01 Prepare - 3-5 hours (I can't remember how long it took to download, install, and configure everything)
+01 Teach - 3 hours
+01 Prove 1st Attempt - 5 hours
+01 Prove 2nd Attempt - 2 hours
+01 Ponder - .5 hour
+----------------------------
+Total Hours - 13.5 -> 15.5 hours
