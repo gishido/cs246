@@ -10,9 +10,13 @@ public class VacationCalculator {
     public static void main(String[] args) {
         VacationCalculator vc = new VacationCalculator();
 
+        float mexCost = vc.calculateVacationCost(Destination.Mexico);
+        float euroCost = vc.calculateVacationCost(Destination.Europe);
         float japanCost = vc.calculateVacationCost(Destination.Japan);
 
-        System.out.println("The cost to Japan is: " + japanCost);
+       System.out.format("The cost to travel to Mexico is: $%.2f\n", mexCost);
+       System.out.format("The cost to travel to Europe is: $%.2f\n", euroCost);
+        System.out.format("The cost to travel to Japan is: $%.2f\n", japanCost);
 
     }
 
