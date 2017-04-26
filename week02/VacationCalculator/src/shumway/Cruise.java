@@ -1,9 +1,5 @@
 package shumway;
 
-import static shumway.Destination.Europe;
-import static shumway.Destination.Japan;
-import static shumway.Destination.Mexico;
-
 /**
  * Created by thesh on 4/25/2017.
  */
