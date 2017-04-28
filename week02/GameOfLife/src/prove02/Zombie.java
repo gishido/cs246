@@ -17,7 +17,6 @@ public class Zombie extends Creature implements Movable, Aggressor {
     // Zombies attack everything but plants. Zombies inflict 10 damage
     if(target instanceof Creature) {
       target.takeDamage(10);
-      _health++;
     }
   }
 
