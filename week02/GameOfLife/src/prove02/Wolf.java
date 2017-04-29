@@ -1,15 +1,15 @@
 package prove02;
 
 import java.awt.Color;
+import java.awt.Point;
 import java.util.Random;
 
 /**
  * Created by thesh on 4/28/2017.
  */
-public class Wolf extends Creature implements Movable, Aware, Aggressor  {
+public class Wolf extends Creature implements Movable, Aware, Aggressor, Spawner  {
   Random _rand;
-  boolean isPreferred = true;
-  boolean isStart = true;
+  boolean canSpawn = false;
   int direction;
 
   public Wolf() {
@@ -18,11 +18,15 @@ public class Wolf extends Creature implements Movable, Aware, Aggressor  {
     _health = 1;
   }
 
+  public boolean isCanSpawn() { return canSpawn;}
+  public void setCanSpawn(boolean trueFalse) {canSpawn = trueFalse;}
+
   public void attack(Creature target) {
     // Wolves only follow and attach animals. Wolves inflict 5 damage
     if(target instanceof Animal) {
       target.takeDamage(5);
-/*      System.out.print("Wolf Just Ate an Animal!\n");*/
+      canSpawn = true;
+      System.out.print("Wolf Just Ate an Animal!\n");
     }
   }
 
@@ -97,6 +101,28 @@ public class Wolf extends Creature implements Movable, Aware, Aggressor  {
         default:
           direction = _rand.nextInt(4);
       }
+  }
+
+  public Creature spawnNewCreature() {
+    if(canSpawn) {
+      //if the wolf can spawn, creates baby
+
+      //get parent current position
+      Point currP = getLocation();
+      //create baby
+      Wolf wBaby = new Wolf();
+      //set baby location to the left of parent
+      currP.x = currP.x--;
+      wBaby.setLocation(currP);
+
+      //disable ability for parent to spawn again until another kill
+      canSpawn = false;
+      System.out.print("Baby Wolf Spawned\n");
+      //return the baby wolf
+      return wBaby;
+     }
+    // returns null if the wolf can't spawn
+    return null;
   }
 
   public Color getColor() {

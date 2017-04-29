@@ -144,6 +144,12 @@ public class CreatureHandler
 					Aggressor a = (Aggressor)c;
 					a.attack(target);
 				}
+
+				if(c instanceof Spawner) {
+					Spawner sp = (Spawner)c;
+					Creature bWolf = sp.spawnNewCreature();
+					_creatures.add(bWolf);
+				}
 				
 			}
 	}
