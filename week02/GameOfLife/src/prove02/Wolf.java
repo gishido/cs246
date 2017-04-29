@@ -10,10 +10,11 @@ public class Wolf extends Creature implements Movable, Aware, Aggressor  {
   Random _rand;
   boolean isPreferred = true;
   boolean isStart = true;
-  String direction;
+  int direction;
 
   public Wolf() {
     _rand = new Random();
+    direction = _rand.nextInt(4);
     _health = 1;
   }
 
@@ -21,105 +22,81 @@ public class Wolf extends Creature implements Movable, Aware, Aggressor  {
     // Wolves only follow and attach animals. Wolves inflict 5 damage
     if(target instanceof Animal) {
       target.takeDamage(5);
+/*      System.out.print("Wolf Just Ate an Animal!\n");*/
     }
   }
 
 
   public void move() {
 
-    if(isPreferred){
       // Choose a random direction each time move() is called.
-      switch (_rand.nextInt(4)) {
-        case 0:
+      switch (direction) {
+        case 0: //right
           _location.x++;
-          direction = "right";
           break;
-        case 1:
+        case 1: //left
           _location.x--;
-          direction = "left";
           break;
-        case 2:
+        case 2: //down
           _location.y++;
-          direction = "down";
           break;
-        case 3:
+        case 3: //up
           _location.y--;
-          direction = "up";
           break;
         default:
           break;
       }
-    }
-    isStart = false;
   }
 
   public void senseNeighbors(Creature above, Creature below, Creature left, Creature right) {
-    if(!isStart) {
       switch (direction) {
-        case "up":
+        case 3: //current direction is up
           if (above instanceof Animal) {
-            setLocation(above.getLocation());
-            isPreferred = false;
+            direction = 3;
           } else if (right instanceof Animal) {
-            setLocation(right.getLocation());
-            isPreferred = false;
+            direction = 0;
           } else if (below instanceof Animal) {
-            setLocation(below.getLocation());
-            isPreferred = false;
+            direction = 2;
           } else if (left instanceof Animal) {
-            setLocation(left.getLocation());
-            isPreferred = false;
+            direction = 1;
           }
           break;
-        case "right":
+        case 0 : //current direction is right
           if (right instanceof Animal) {
-            setLocation(right.getLocation());
-            isPreferred = false;
+            direction = 0;
           } else if (below instanceof Animal) {
-            setLocation(below.getLocation());
-            isPreferred = false;
+            direction = 2;
           } else if (left instanceof Animal) {
-            setLocation(left.getLocation());
-            isPreferred = false;
+            direction = 1;
           } else if (above instanceof Animal) {
-            setLocation(above.getLocation());
-            isPreferred = false;
+            direction = 3;
           }
           break;
-        case "down":
+        case 2 : //current direction is down
           if (below instanceof Animal) {
-            setLocation(below.getLocation());
-            isPreferred = false;
+            direction = 2;
           } else if (left instanceof Animal) {
-            setLocation(left.getLocation());
-            isPreferred = false;
+            direction = 1;
           } else if (above instanceof Animal) {
-            setLocation(above.getLocation());
-            isPreferred = false;
+            direction = 3;
           } else if (right instanceof Animal) {
-            setLocation(right.getLocation());
-            isPreferred = false;
+            direction = 0;
           }
           break;
-        case "left":
+        case 1 : //current direction is left
           if (left instanceof Animal) {
-            setLocation(left.getLocation());
-            isPreferred = false;
+              direction = 1;
           } else if (above instanceof Animal) {
-            setLocation(above.getLocation());
-            isPreferred = false;
+            direction = 3;
           } else if (right instanceof Animal) {
-            setLocation(right.getLocation());
-            isPreferred = false;
+            direction = 0;
           } else if (below instanceof Animal) {
-            setLocation(below.getLocation());
-            isPreferred = false;
+            direction = 2;
           }
           break;
         default:
-          isPreferred = true;
+          direction = _rand.nextInt(4);
       }
-    }
   }
 
   public Color getColor() {
