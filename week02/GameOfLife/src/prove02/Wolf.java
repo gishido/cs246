@@ -26,7 +26,6 @@ public class Wolf extends Creature implements Movable, Aware, Aggressor, Spawner
     if(target instanceof Animal) {
       target.takeDamage(5);
       canSpawn = true;
-      System.out.print("Wolf Just Ate an Animal!\n");
     }
   }
 
@@ -108,16 +107,16 @@ public class Wolf extends Creature implements Movable, Aware, Aggressor, Spawner
       //if the wolf can spawn, creates baby
 
       //get parent current position
-      Point currP = getLocation();
+      Point currP = (Point)getLocation().clone();
       //create baby
       Wolf wBaby = new Wolf();
       //set baby location to the left of parent
-      currP.x = currP.x--;
+      currP.x += -1;
       wBaby.setLocation(currP);
 
       //disable ability for parent to spawn again until another kill
       canSpawn = false;
-      System.out.print("Baby Wolf Spawned\n");
+
       //return the baby wolf
       return wBaby;
      }

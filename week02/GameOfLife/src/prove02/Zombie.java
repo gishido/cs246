@@ -30,12 +30,6 @@ public class Zombie extends Creature implements Movable, Aggressor {
       case 1:
         _location.x--;
         break;
-/*      case 2:
-        _location.y++;
-        break;
-      case 3:
-        _location.y--;
-        break;*/
       default:
         break;
     }

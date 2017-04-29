@@ -3,6 +3,7 @@ package prove02;
 import java.util.Random;
 import java.awt.Point;
 import java.util.List;
+import java.util.concurrent.Exchanger;
 
 /**
 * The "brains" of the game, which controls all of the creature activites.
@@ -116,6 +117,7 @@ public class CreatureHandler
 	*/
 	public void updateCreatures() {
 
+	  Creature _tempCreature = null;
 		// Handle all our creature behaviors here. Since we don't know ahead of time
 		// which creatures implement which behaviors, we can use the instanceof keyword
 		// to see if a given instance implements a particular interface.
@@ -145,12 +147,23 @@ public class CreatureHandler
 					a.attack(target);
 				}
 
+
 				if(c instanceof Spawner) {
-					Spawner sp = (Spawner)c;
-					Creature bWolf = sp.spawnNewCreature();
-					_creatures.add(bWolf);
+          Creature target = null;
+          Spawner sp = (Spawner)c;
+
+          target = sp.spawnNewCreature();
+          //check for nulls
+          if(target != null) {
+            _tempCreature = target;
+          }
 				}
-				
-			}
+
+      }
+      // if the creature is null, then skip the add
+      if(_tempCreature != null) {
+        _creatures.add(_tempCreature);
+
+      }
 	}
 }
