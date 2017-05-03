@@ -1,0 +1,47 @@
+# 02 Ponder : Weekly Reflection
+
+1. Describe one challenge your team experienced working on the Vacation Calendar activity.
+I think my initial issue with the VacationCalendar was first in the display, and later with the calculation.  It was a small bump in the road.
+
+
+2. For the Game of Life assignment, what advantages do you see in using interfaces to define creature behaviors, rather than subclasses?
+Based on what I saw, using interfaces did not require a series of instantiation in order to be effective.  It also enforced specified methods to be defined.  Ultimately, I think interfaces make the programs easier to read and follow what's going on.  That was helpful for me as I was trying to trace the flow of the Game Of Life program to determine what to do, when.
+
+
+3. Did you complete the Stretch Challenge for the Game of Life Assignment? If so, briefly describe what you did, and how you structured your code.
+I did not complete the streth challenge.  I wanted to attempt it, but it was open ended enough that I would have lost myself in it more than I had time to pursue.  I did have a time management issue this week.  I feel good about my work, however, and I since I have the code, I may chace that down another time.
+
+
+4. What did you learn from comparing your code to the teacher's solution?
+I actually haven't looked at the teacher's solution yet :)
+
+
+5. After completing the assignments this week, what questions do you still have?
+For now, I think I'm good.  Getting through the program helped answer many of the questions I had.
+
+
+6. If you were getting paid to work on this week's Prove assignment and you had another month to work on it, what would you add?
+I would add the ability to introduce more animals over time (animals wander in the area), created more creatures, had the zomibes travel in a direction longer before changing direction, and added some different shapes.  I'm sure there's more I could think of as I worked on it more.
+
+
+7. A common Java interview question is "describe the difference between an interface and an abstract class". How would you answer that question?
+Interfaces are implicity abstract and can't have implementations.  Abstract classes can have implementations that handle default behaviors. 
+
+
+8. Of all of the resources in this week's Preparation assignment, which was the _most_ helpful to you and why?
+Interface tutorial.  Without this, I would have been dead in the water.
+
+
+9. Of all of the resources in this week's Preparation assignment, which was the _least_ helpful to you and why?
+The format specifier.  Probably because we didn't work in a console program this week.
+
+
+10. How many hours did you spend on this class this week?
+
+02 Prepare - 4
+02 Teach - 2
+02 Prove 1st Attempt - 18
+02 Prove 2nd Attempt - 0
+02 Ponder - .5
+----------------------------
+Total Hours - 24.5
