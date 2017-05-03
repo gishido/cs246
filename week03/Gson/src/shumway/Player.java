@@ -11,7 +11,10 @@ public class Player {
   int gold;
 
   public Player (String myName, int myHealth, int myMana, int myGold) {
-
+    name = myName;
+    health = myHealth;
+    mana = myMana;
+    gold = myGold;
   }
 
   public String toString() {
@@ -24,7 +27,7 @@ public class Player {
 
   }
 
-  private void display() {
+  public void display() {
     System.out.println("Name: " + name + " Health: " + health + " Mana: " + mana + " Gold: " + gold);
   }
 
