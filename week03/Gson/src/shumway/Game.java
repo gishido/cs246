@@ -28,7 +28,7 @@ public class Game {
 
     //reference for writing a file
     //http://stackoverflow.com/questions/2885173/how-do-i-create-a-file-and-write-to-it-in-java
-    try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("playerData.txt"), StandardCharsets.UTF_8))) {
+    try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("playerData.json"), StandardCharsets.UTF_8))) {
       writer.write(playerJson);
     }
     catch (IOException ex) {

@@ -1,5 +1,6 @@
 package shumway;
 
+import com.google.gson.Gson;
 import java.util.HashMap;
 import java.util.Map;
 import twitter4j.Query;
@@ -40,6 +41,7 @@ public class TweetLoader {
     //http://tutorialswithexamples.com/java-map-and-hashmap-tutorial-with-examples/
     HashMap<String,BYUITweet> ht = new HashMap<String,BYUITweet>();
     BYUITweet tweet = new BYUITweet();
+    Gson gson = new Gson();
 
 
     //Query, QueryResult, and Status came from this site
@@ -48,6 +50,8 @@ public class TweetLoader {
     try {
       QueryResult result = twitter.search(query);
       for (Status status : result.getTweets()) {
+
+
 
         //TODO: need to understand out to deserialize tweet results
         //TODO: take the JSON output and assign it to the map
