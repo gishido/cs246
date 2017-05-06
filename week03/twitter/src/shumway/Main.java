@@ -3,6 +3,8 @@ package shumway;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+	      TweetLoader newLoad = new TweetLoader();
+
+	      newLoad.retrieveTweetsWithHashTag("#byui");
     }
 }

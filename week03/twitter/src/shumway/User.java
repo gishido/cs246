@@ -6,10 +6,11 @@ import com.google.gson.annotations.SerializedName;
  * Created by thesh on 5/2/2017.
  */
 public class User {
-  String name;
+  @SerializedName("screen_name")
+  public String name;
 
-  @SerializedName("Followers_count")
-  int followers;
+  @SerializedName("followers_count")
+  public int followers;
 
   public String getName() { return name; }
 
