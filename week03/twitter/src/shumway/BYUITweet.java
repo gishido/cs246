@@ -1,6 +1,5 @@
 package shumway;
 
-import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by thesh on 5/2/2017.
@@ -8,8 +7,7 @@ import com.google.gson.annotations.SerializedName;
 public class BYUITweet {
   User user;
 
-  @SerializedName("text")
-  public String text;
+  String text;
 
   public User getUser() { return user; }
 

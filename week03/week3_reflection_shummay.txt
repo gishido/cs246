@@ -1,0 +1,47 @@
+# 03 Ponder : Weekly Reflection
+
+1. Describe one challenge your team experienced working on the JSON parsing activity.
+I don't remember our team having any particular difficulty with JSON parsing.  It seemed we all were able to parse and write JSON without much issue.
+
+
+2. For the Twitter API assignment, what did you learn about how APIs work?
+First of all, I knew that these types of APIs existed, but I never know how to access one or to use it. So it was pretty eye opening.  I liked that all I had to do was download the relevant pack for intellij and then include those libraries in my program.  That's pretty slick.  Using the APIs, in some ways, is like learning another language.  But for our use case, I think I was able to see what's possible.
+
+
+3. Did you complete the Stretch Challenge for the Twitter API Assignment? If so, briefly describe which method you used.
+I eventually did the stretch challenge, but only after I looked at the teacher solution.  I went with the lambda method.  It looked more straightforward to me.
+
+
+4. What did you learn from comparing your code to the teacher's solution?
+I learned that I was doing too much in the tweetloader.  I knew I was trying to load a map file, but I didn't get that I was creating a list of the the map in main and then looping through that list.  I spent a bunch of time working on this part of it but felt I was missing something.  It turns out I was!  I had the right idea, just hadn't implemented the right idea in the right place.
+
+
+5. After completing the assignments this week, what questions do you still have?
+I think I'm good for now.
+
+
+6. Aside from just searching for tweets with a given hashtag, what is another use you could see for the twitter API?
+I could see having a rovolving list of favorable twitter feeds cycle on a web page... kinda like a testimonial, but more real time.  Or a news feed, if that's the kind of site that's been built.
+
+
+7. A common Java interview question is "Describe what an API is and how it's used". (Sometimes people refer to these types of APIs as "REST APIs") How would you answer that question?
+An API is are a collection of exposed functions/interactions by an application that provide a way for other applications to communicate with it...more or less.  REST is a "standard" way of creating and presenting an API.
+
+
+8. Of all of the resources in this week's reading, which was the _most_ helpful to you and why?
+I found the twitterj examples the most helpful.  That really made it easier to know how to gain access to twitter itself.
+
+
+9. Of all of the resources in this week's reading, which was the _least_ helpful to you and why?
+I found that the requirement, although it made sense, to get raw json wasn't as helpful as just gaining access to the actual twitter object.  But I know things are there for a reason.
+
+
+10. How many hours did you spend on this class this week?
+
+01 Prepare - 1
+01 Teach - 2
+01 Prove 1st Attempt - 12
+01 Prove 2nd Attempt - 2
+01 Ponder - .5
+----------------------------
+Total Hours - 17.5

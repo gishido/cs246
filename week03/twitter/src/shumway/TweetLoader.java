@@ -34,10 +34,10 @@ public class TweetLoader {
     ConfigurationBuilder cb = new ConfigurationBuilder();
 
     cb.setDebugEnabled(true)
-        .setOAuthConsumerKey("enter me")
-        .setOAuthConsumerSecret("enter me")
-        .setOAuthAccessToken("enter me")
-        .setOAuthAccessTokenSecret("enter me")
+        .setOAuthConsumerKey("JFq9JE3m6UWnzlDJgMr3Goono")
+        .setOAuthConsumerSecret("kMpROMC9YzbJrbT2vGwJTg9hqlJXVHzv6znMerxyPAk1tWd5wF")
+        .setOAuthAccessToken("213183992-WgVaBbpyq6fcmS9PJFgnmoh66pqnqYg4zXKsHGCA")
+        .setOAuthAccessTokenSecret("28r0ul8sDSksjbB0RBeG6BXH6Fp3xlvillTzoWnyLNnzh")
         .setJSONStoreEnabled(true);
 
     TwitterFactory tf = new TwitterFactory(cb.build());
@@ -47,59 +47,32 @@ public class TweetLoader {
   public Map<String,BYUITweet> retrieveTweetsWithHashTag(String hashtag) {
     //for hashmap example
     //http://tutorialswithexamples.com/java-map-and-hashmap-tutorial-with-examples/
-    Map<String,BYUITweet> ht = new HashMap<String,BYUITweet>();
-    User user = new User();
-    BYUITweet tweet = new BYUITweet();
-    Gson gson = new Gson();
-    String jsonTweet;
-    int count = 0;
-
+    Map<String,BYUITweet> ht = new HashMap<>();
 
     //Query, QueryResult, and Status came from this site
     //http://twitter4j.org/en/code-examples.html
     //Twitter twitter = TwitterFactory.getSingleton();
     Query query = new Query(hashtag);
+    QueryResult result;
+
     try {
-      QueryResult result = twitter.search(query);
-      List<Status> tweets = result.getTweets();
-      //TODO: need to understand out to deserialize tweet results
-//TODO: take the JSON output and assign it to the map
-      for (Status status : tweets) {
-        System.out.println("@" + status.getUser().getScreenName() + " - " + "followers: " + status.getUser().getFollowersCount());
-        count++;
-        jsonTweet = TwitterObjectFactory.getRawJSON(status);
-
-       /* System.out.println("From JSON: " + jsonTweet);*/
-        user = gson.fromJson(jsonTweet, User.class);
-
-        tweet = gson.fromJson(jsonTweet, BYUITweet.class);
-
-/*        try (Writer writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("tweetData.json"), StandardCharsets.UTF_8))) {
-          writer.write(jsonTweet);
-        }
-        catch (IOException ex) {
-          // Handle me
-        }*/
-
-        System.out.println("User name: " + user.getName() + " followers: " + user.getFollowers());
-
-        //tweet.setUser(user);
-        //tweet.setText(TwitterObjectFactory.getRawJSON(status.getText()));
-
-       /* System.out.println("TwitterUser: " + tweet.getUser().getName() + " TwitterText: " + tweet.getText());*/
-
-        ht.put(tweet.getUser().getName(), tweet);
-
-        System.out.println(count + " iterations");
-
-      }
-    } catch (TwitterException e) {
+      result = twitter.search(query);
+      } catch (TwitterException e) {
       e.printStackTrace();
+      return null;
+    }
+
+    for(Status status : result.getTweets()) {
+      String json = TwitterObjectFactory.getRawJSON(status);
+
+      Gson gson = new Gson();
+      BYUITweet bt = gson.fromJson(json, BYUITweet.class);
+
+      ht.put(bt.user.name, bt);
     }
 
 
 
-    //TODO: doublecheck this function - but need to return a MAP
     return ht;
   }
 }
